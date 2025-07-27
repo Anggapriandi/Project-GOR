@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+
+:root {
+    --primary-bg: #FFFFFF;
+    --secondary-bg: #EDEFF1;
+    --card-bg: #FFFFFF;
+    --accent-color: #0D47A1;
+    --action-color: #1976D2;
+    --heading-color: #212121;
+    --body-color: #616161;
+    --light-text: #FFFFFF;
+    --dark-text: #000000;
+
+    --box-shadow: .5rem .5rem 0 var(--action-color);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+}
+
+*{ 
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 0.2s ease-in-out;
+    color: var(--dark-text);
+    text-decoration: none;
+}
+
+::selection{
+    background-color: var(--accent-color);
+    color: var(--light-text);
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--action-color);
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 8rem 9% 2rem;
+}
+
+.heading{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--heading-color);
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.heading h1{
+    padding-bottom: 2rem;
+}
+
+.heading p{
+    max-width: 60rem;
+    margin: auto;
+    color: var(--body-color);
+    font-size: 1.7rem;
+}
+
+.all-btn{
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    background-color: var(--action-color);
+    border-radius: .5rem;
+    color: var(--light-text);
+    border: 2px solid var(--action-color);
+}
+
+.all-btn:hover{
+    background-color: transparent;
+    color: var(--action-color);
+}
+
+/* navbar sections starts */
+.header{
+    padding: 3rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0%;
+    left: 0;
+    z-index: 10000;
+    background-color: var(--light-text);
+    box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+.header .logo a {
+    display: flex; 
+    align-items: center; 
+    text-decoration: none; 
+    gap: 1rem; 
+}
+
+.header .navbar a{
+    margin-left: 2rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+.header .navbar a:hover{
+    color: var(--accent-color);
+}
+
+.header .navbar .btn{
+    padding: .6rem 3rem;
+    background-color: var(--action-color);
+    color: var(--light-text);
+    border-radius: .5rem;
+    border: 2px solid var(--action-color);
+}
+
+.header .navbar .btn:hover{
+    color: var(--accent-color);
+    background-color: transparent;
+}
+
+#menu-btn{
+    padding: 1rem 1rem;
+    background-color: #eee;
+    font-size: 3rem;
+    color: var(--accent-color);
+    border-radius: .5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* home section starts  */
+.home{
+    padding-top: 15rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home .image{
+    max-width: 570px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.home .image img{
+    width: 90%;
+    margin-top: 5rem;
+}
+
+.home .content{
+    flex: 1 1 45rem;
+}
+
+.home .content h1{
+    font-size: 4.5rem;
+    padding-block-end: 1rem 0;
+    color: var(--heading-color);
+}
+
+.home .content p{
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    max-width: 40rem;
+    color: var(--body-color);
+    padding-bottom: 4rem;
+}
+
+.home .content .home-btn{
+    padding: 1.3rem 2rem;
+    background-color: var(--action-color);
+    color: var(--light-text);
+    font-size: 1.4rem;
+    box-shadow: .5rem .5rem var(--accent-color);
+    border: 2px solid var(--action-color);
+    border-radius: .5rem;
+}
+
+.home .content .home-btn:hover{
+    background-color: var(--accent-color);
+    box-shadow: none;
+    color: var(--light-text);
+}
+
+/* features section starts  */
+.features .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin: 3rem 0;
+}
+
+.features .row .image{
+    flex: 1 1 45rem;
+}
+
+.features .row .image img{
+    width: 100%;
+}
+
+.features .row .content{
+    flex: 1 1 45rem;
+}
+
+.features .row .content h1{
+    font-size: 4rem;
+    padding: 1rem 0;
+    color: var(--heading-color);
+}
+
+.features .row .content p{
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    color: var(--body-color);
+    padding-bottom: 4rem;
+}
+
+
+
+.bagian-olahraga, .bagian-mengapa, .bagian-cta {
+    text-align: center;
+}
+
+.bagian-olahraga h2, .bagian-mengapa h2, .bagian-cta h2 {
+    font-size: 3rem;
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+}
+
+.bagian-olahraga .subtitle, .bagian-mengapa .subtitle, .bagian-cta p {
+    font-size: 1.7rem;
+    color: var(--body-color);
+    max-width: 60rem;
+    margin: 0 auto 5rem auto;
+}
+
+/* 1. Gaya untuk Bagian Olahraga Populer */
+.bagian-olahraga {
+    background-color: var(--secondary-bg);
+}
+
+.grid-olahraga {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.kartu-olahraga {
+    background-color: var(--card-bg);
+    border-radius: .8rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.kartu-olahraga:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gambar-container {
+    position: relative;
+}
+
+.gambar-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(45, 52, 63, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.kartu-olahraga:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: var(--light-text);
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.4;
+    padding: 2rem;
+}
+
+.kartu-olahraga .konten {
+    padding: 2.5rem;
+}
+
+.kartu-olahraga .konten h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+}
+
+.kartu-olahraga .konten p {
+    font-size: 1.5rem;
+    color: var(--body-color);
+    line-height: 1.6;
+}
+
+
+/* 2. Gaya untuk Bagian Keunggulan */
+.grid-keunggulan {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.kartu-keunggulan {
+    background: var(--accent-color);
+    padding: 3rem 2rem;
+    border-radius: .8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kartu-keunggulan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ikon-keunggulan {
+    font-size: 4rem;
+    height: 8rem;
+    width: 8rem;
+    line-height: 8rem;
+    border-radius: 50%;
+    background-color: hsla(231, 69%, 60%, 0.1);
+    color: var(--action-color);
+    margin: 0 auto 2rem auto;
+}
+
+.kartu-keunggulan h3 {
+    font-size: 2rem;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.kartu-keunggulan p {
+    font-size: 1.5rem;
+    color: var(--light-text);
+    line-height: 1.7;
+}
+
+/* 3. Gaya untuk Bagian CTA (Call to Action) */
+.bagian-cta {
+    background-color: var(--action-color);
+    padding: 6rem 9%;
+    border-radius: .8rem;
+    margin: 5rem 9%;
+}
+
+.bagian-cta h2 {
+    color: var(--light-text);
+}
+
+.bagian-cta p {
+    color: hsla(0, 0%, 100%, 0.85);
+    margin-bottom: 3rem;
+}
+
+.tombol-cta {
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--action-color);
+    background-color: var(--light-text);
+    border-radius: .5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.tombol-cta:hover {
+    transform: scale(1.05);
+    background-color: var(--accent-color);
+    color: var(--light-text);
+}
+
+/* ============== END: Gaya untuk Fitur Baru ============== */
+
+/* footer section starts */
+.footer {
+    background-color: var(--heading-color);
+    color: var(--light-text);
+    padding: 8rem 9% 2rem;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 4rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2rem;
+    color: var(--light-text);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--body-color);
+    margin-bottom: 1rem;
+}
+
+.footer .box-container .box a,
+.footer .box-container .box p {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light-text);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color: var(--action-color);
+}
+
+.footer .box-container .box a:hover {
+    color: var(--action-color);
+}
+
+.footer .box-container .box a:hover i{
+    padding-right:1rem;
+}
+
+.footer .credit{
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--body-color);
+    border-top: .1rem solid var(--body-color);
+}
+
+.footer .credit span{
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    section {
+        padding: 8rem 2rem 2rem;
+    }
+    .bagian-cta {
+        margin: 5rem 2%;
+    }
+}
+
+@media (max-width: 768px){
+    #menu-btn{
+        display: initial;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        box-shadow: var(--box-shadow);
+        width: 33rem;
+        border-radius: .5rem;
+        border: 2px solid var(--action-color);
+        background-color: var(--primary-bg);
+        transform: scale(0);
+        transform-origin: top right;
+    }
+
+    .header .navbar.active{
+        transform: scale(1);
+    }
+
+    .header .navbar a{
+        margin: 2.5rem;
+        text-align: center;
+        display: block;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
